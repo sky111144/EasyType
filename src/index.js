@@ -13,11 +13,14 @@ class EasyType {
         OBJECT: "[object Object]",
         FUNCTION: "[object Function]",
         SET: "[object Set]",
+        WEAKSET: "[object WeakSet]",
+        MAP: "[object Map]",
         SYMBOL: "[object Symbol]",
         MATH: "[object Math]",
         REGEXP: "[object RegExp]",
         PROMISE: "[object Promise]",
-        JSON: "[object JSON]"
+        JSON: "[object JSON]",
+        ERROR: "[object Error]"
     }
 
     typeOf (target) {
@@ -56,6 +59,14 @@ class EasyType {
         return this.typeOf(target) === this.types.SET;
     }
 
+    isWeakSet (target) {
+        return this.typeOf(target) === this.types.WEAKSET;
+    }
+
+    isMap (target) {
+        return this.typeOf(target) === this.types.MAP;
+    }
+
     isSymbol (target) {
         return this.typeOf(target) === this.types.SYMBOL;
     }
@@ -78,6 +89,10 @@ class EasyType {
 
     isJSON (target) {
         return this.typeOf(target) === this.types.JSON;
+    }
+
+    isError (target) {
+        return this.typeOf(target) === this.types.ERROR;
     }
 }
 

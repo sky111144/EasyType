@@ -1,3 +1,10 @@
+### v1.0.3
++ 3 new types of judgment are supported。
+  1. Error
+  2. Map
+  3. WeakSet
+
+
 ### v1.0.2
 + 14 types of judgment are supported。
   1. Null
