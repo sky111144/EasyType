@@ -1,3 +1,16 @@
+### v1.0.4
++ 10 new types of judgment are supported。
+  1. Int8Array
+  2. Uint8Array
+  3. Uint8ClampedArray
+  4. Int16Array
+  5. Uint16Array
+  6. Int32Array
+  7. Uint32Array
+  8. Float32Array
+  9. Float64Array
+  9. TypedArray
+
 ### v1.0.3
 + 3 new types of judgment are supported。
   1. Error

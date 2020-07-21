@@ -11,7 +11,7 @@ npm i -S @easyprogram/easytype
 
 #### Usage
 
-```JavaScript
+```js
 const EasyType = require("@easyprogram/easytype");
 
 // 1. Determine whether it is a null
@@ -90,5 +90,43 @@ EasyType.isError(new ReferenceError()) // true
 EasyType.isError(new SyntaxError()) // true
 EasyType.isError(new TypeError()) // true
 EasyType.isError(new URIError()) // true
+
+// 18. Determine whether it is a Int8Array
+EasyType.isInt8Array(new Int8Array()); // true
+
+// 19. Determine whether it is a Uint8Array
+EasyType.isUint8Array(new Uint8Array()); // true
+
+// 20. Determine whether it is a Uint8ClampedArray
+EasyType.isUint8ClampedArray(new Uint8ClampedArray()); // true
+
+// 21. Determine whether it is a Int16Array
+EasyType.isInt16Array(new Int16Array()); // true
+
+// 22. Determine whether it is a Uint16Array
+EasyType.isUint16Array(new Uint16Array()); // true
+
+// 23. Determine whether it is a Int32Array
+EasyType.isInt32Array(new Int32Array()); // true
+
+// 24. Determine whether it is a Uint32Array
+EasyType.isUint32Array(new Uint32Array()); // true
+
+// 25. Determine whether it is a Float32Array
+EasyType.isFloat32Array(new Float32Array()); // true
+
+// 26. Determine whether it is a Float64Array
+EasyType.isFloat64Array(new Float64Array()); // true
+
+// 27. Determine whether it is a TypedArray
+EasyType.isTypedArray(new Int8Array()); // true
+EasyType.isTypedArray(new Uint8Array()); // true
+EasyType.isTypedArray(new Uint8ClampedArray()); // true
+EasyType.isTypedArray(new Int16Array()); // true
+EasyType.isTypedArray(new Uint16Array()); // true
+EasyType.isTypedArray(new Int32Array()); // true
+EasyType.isTypedArray(new Uint32Array()); // true
+EasyType.isTypedArray(new Float32Array()); // true
+EasyType.isTypedArray(new Float64Array()); // true
 
 ```

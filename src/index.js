@@ -20,7 +20,16 @@ class EasyType {
         REGEXP: "[object RegExp]",
         PROMISE: "[object Promise]",
         JSON: "[object JSON]",
-        ERROR: "[object Error]"
+        ERROR: "[object Error]",
+        INT8ARRAY: "[object Int8Array]",
+        UINT8ARRAY: "[object Uint8Array]",
+        UINT8CLAMPEDARRAY: "[object Uint8ClampedArray]",
+        INT16ARRAY: "[object Int16Array]",
+        UINT16ARRAY: "[object Uint16Array]",
+        INT32ARRAY: "[object Int32Array]",
+        UINT32ARRAY: "[object Uint32Array]",
+        FLOAT32ARRAY: "[object Float32Array]",
+        FLOAT64ARRAY: "[object Float64Array]"
     }
 
     typeOf (target) {
@@ -94,6 +103,57 @@ class EasyType {
     isError (target) {
         return this.typeOf(target) === this.types.ERROR;
     }
+
+    isInt8Array (target) {
+        return this.typeOf(target) === this.types.INT8ARRAY;
+    }
+
+    isUint8Array (target) {
+        return this.typeOf(target) === this.types.UINT8ARRAY;
+    }
+
+    isUint8ClampedArray (target) {
+        return this.typeOf(target) === this.types.UINT8CLAMPEDARRAY;
+    }
+
+    isInt16Array (target) {
+        return this.typeOf(target) === this.types.INT16ARRAY;
+    }
+
+    isUint16Array (target) {
+        return this.typeOf(target) === this.types.UINT16ARRAY;
+    }
+
+    isInt32Array (target) {
+        return this.typeOf(target) === this.types.INT32ARRAY;
+    }
+
+    isUint32Array (target) {
+        return this.typeOf(target) === this.types.UINT32ARRAY;
+    }
+
+    isFloat32Array (target) {
+        return this.typeOf(target) === this.types.FLOAT32ARRAY;
+    }
+
+    isFloat64Array (target) {
+        return this.typeOf(target) === this.types.FLOAT64ARRAY;
+    }
+
+    isTypedArray (target) {
+        return [
+          this.types.INT8ARRAY,
+          this.types.UINT8ARRAY,
+          this.types.UINT8CLAMPEDARRAY,
+          this.types.INT16ARRAY,
+          this.types.UINT16ARRAY,
+          this.types.INT32ARRAY,
+          this.types.UINT32ARRAY,
+          this.types.FLOAT32ARRAY,
+          this.types.FLOAT64ARRAY
+        ].indexOf(this.typeOf(target)) !== -1;
+    }
+
 }
 
 
