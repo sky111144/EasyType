@@ -1,7 +1,7 @@
 class EasyType {
     constructor () {}
 
-    version = "1.0.5"
+    version = "1.0.6"
 
     types = {
         NULL: "[object Null]",
@@ -30,7 +30,9 @@ class EasyType {
         UINT32ARRAY: "[object Uint32Array]",
         FLOAT32ARRAY: "[object Float32Array]",
         FLOAT64ARRAY: "[object Float64Array]",
-        DATE: "[object Date]"
+        ARRAYBUFFER: "[object ArrayBuffer]",
+        DATE: "[object Date]",
+        BLOB: "[object Blob]"
     }
 
     typeOf (target) {
@@ -51,6 +53,11 @@ class EasyType {
 
     isNumber (target) {
         return this.typeOf(target) === this.types.NUMBER;
+    }
+
+    isNaN (target) {
+        let n = Number(target);
+        return n !== n;
     }
 
     isString (target) {
@@ -143,22 +150,34 @@ class EasyType {
 
     isTypedArray (target) {
         return [
-          this.types.INT8ARRAY,
-          this.types.UINT8ARRAY,
-          this.types.UINT8CLAMPEDARRAY,
-          this.types.INT16ARRAY,
-          this.types.UINT16ARRAY,
-          this.types.INT32ARRAY,
-          this.types.UINT32ARRAY,
-          this.types.FLOAT32ARRAY,
-          this.types.FLOAT64ARRAY
+            this.types.INT8ARRAY,
+            this.types.UINT8ARRAY,
+            this.types.UINT8CLAMPEDARRAY,
+            this.types.INT16ARRAY,
+            this.types.UINT16ARRAY,
+            this.types.INT32ARRAY,
+            this.types.UINT32ARRAY,
+            this.types.FLOAT32ARRAY,
+            this.types.FLOAT64ARRAY
         ].indexOf(this.typeOf(target)) !== -1;
+    }
+
+    isArrayBuffer (target) {
+        return this.typeOf(target) === this.types.ARRAYBUFFER;
     }
 
     isDate (target) {
         return this.typeOf(target) === this.types.DATE;
     }
 
+    isFalsity (target) {
+        return this.types.NULL === this.typeOf(target) ||
+               this.types.UNDEFINED === this.typeOf(target) ||
+               target === false ||
+               target === 0 ||
+               target === "" ||
+               this.isNaN(target)
+    }
 }
 
 

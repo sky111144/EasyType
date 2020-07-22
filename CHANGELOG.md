@@ -1,3 +1,9 @@
+### v1.0.6
++ 3 new types of judgment are supported。
+  1. ArrayBuffer
+  2. NaN
+  3. Falsity
+
 ### v1.0.5
 + 1 new types of judgment are supported。
   1. Date
@@ -13,7 +19,7 @@
   7. Uint32Array
   8. Float32Array
   9. Float64Array
-  9. TypedArray
+  10. TypedArray
 
 ### v1.0.3
 + 3 new types of judgment are supported。
