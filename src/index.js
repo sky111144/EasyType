@@ -1,7 +1,7 @@
 class EasyType {
     constructor () {}
 
-    version = "1.0.0"
+    version = "1.0.5"
 
     types = {
         NULL: "[object Null]",
@@ -29,7 +29,8 @@ class EasyType {
         INT32ARRAY: "[object Int32Array]",
         UINT32ARRAY: "[object Uint32Array]",
         FLOAT32ARRAY: "[object Float32Array]",
-        FLOAT64ARRAY: "[object Float64Array]"
+        FLOAT64ARRAY: "[object Float64Array]",
+        DATE: "[object Date]"
     }
 
     typeOf (target) {
@@ -152,6 +153,10 @@ class EasyType {
           this.types.FLOAT32ARRAY,
           this.types.FLOAT64ARRAY
         ].indexOf(this.typeOf(target)) !== -1;
+    }
+
+    isDate (target) {
+        return this.typeOf(target) === this.types.DATE;
     }
 
 }

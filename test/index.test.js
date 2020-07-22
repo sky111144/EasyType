@@ -25,3 +25,4 @@ const isUint32Array = require("./cases/isUint32Array.test.js");
 const isFloat32Array = require("./cases/isFloat32Array.test.js");
 const isFloat64Array = require("./cases/isFloat64Array.test.js");
 const isTypedArray = require("./cases/isTypedArray.test.js");
+const isDate = require("./cases/isDate.test.js");

@@ -1,3 +1,7 @@
+### v1.0.5
++ 1 new types of judgment are supported。
+  1. Date
+
 ### v1.0.4
 + 10 new types of judgment are supported。
   1. Int8Array

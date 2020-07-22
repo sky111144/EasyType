@@ -1,5 +1,7 @@
 ### EasyType
 
+[![NPM version](https://img.shields.io/npm/v/@easyprogram/easytype.svg)](https://www.npmjs.com/package/@easyprogram/easytype) [![NPM license](https://img.shields.io/npm/l/@easyprogram/easytype.svg)](https://www.npmjs.com/package/@easyprogram/easytype)  [![NPM downloads](https://img.shields.io/npm/dm/@easyprogram/easytype.svg)](https://www.npmjs.com/package/@easyprogram/easytype)
+
 #### Target
 + To determine the type of a variable in JavaScript
 
@@ -128,5 +130,8 @@ EasyType.isTypedArray(new Int32Array()); // true
 EasyType.isTypedArray(new Uint32Array()); // true
 EasyType.isTypedArray(new Float32Array()); // true
 EasyType.isTypedArray(new Float64Array()); // true
+
+// 28. Determine whether it is a Date
+EasyType.isDate(new Date()); // true
 
 ```
