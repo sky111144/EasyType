@@ -8,6 +8,7 @@ class EasyType {
         UNDEFINED: "[object Undefined]",
         BOOLEAN: "[object Boolean]",
         NUMBER: "[object Number]",
+        BIGINT: "[object BigInt]",
         STRING: "[object String]",
         ARRAY: "[object Array]",
         OBJECT: "[object Object]",
@@ -62,6 +63,10 @@ class EasyType {
 
     isString (target) {
         return this.typeOf(target) === this.types.STRING;
+    }
+
+    isBigInt (target) {
+        return this.typeOf(target) === this.types.BIGINT;
     }
 
     isObject (target) {
@@ -177,6 +182,18 @@ class EasyType {
                target === 0 ||
                target === "" ||
                this.isNaN(target)
+    }
+
+    isPrimitive (target) {
+        return [
+            this.types.NULL,
+            this.types.UNDEFINED,
+            this.types.BOOLEAN,
+            this.types.NUMBER,
+            this.types.STRING,
+            this.types.SYMBOL,
+            this.types.BIGINT
+        ].indexOf(this.typeOf(target)) !== -1;
     }
 }
 

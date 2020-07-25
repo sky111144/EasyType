@@ -4,7 +4,7 @@ const EasyType = require("../../dist/easytype");
 const { expect } = chai;
 
 describe("isNumber：", function () {
-    it("EasyType.isNumber(null) should be true", function () {
+    it("EasyType.isNumber(null) should be false", function () {
         expect(EasyType.isNumber(null)).to.equal(false);
     });
 

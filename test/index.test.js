@@ -29,3 +29,5 @@ const isArrayBuffer = require("./cases/isArrayBuffer.test.js");
 const isDate = require("./cases/isDate.test.js");
 const isNaN = require("./cases/isNaN.test.js");
 const isFalsity = require("./cases/isFalsity.test.js");
+const isBigInt = require("./cases/isBigInt.test.js");
+const isPrimitive = require("./cases/isPrimitive.test.js");

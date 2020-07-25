@@ -1,3 +1,8 @@
+### v1.0.7
++ 2 new types of judgment are supported。
+  1. Primitive
+  2. BigInt
+
 ### v1.0.6
 + 3 new types of judgment are supported。
   1. ArrayBuffer
