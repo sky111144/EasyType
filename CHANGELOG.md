@@ -1,3 +1,7 @@
+### v1.0.9
++ 1 new types of judgment are supported。
+  1. Empty Array
+
 ### v1.0.8
 + 1 new types of judgment are supported。
   1. WeakMap

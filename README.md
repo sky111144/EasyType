@@ -181,4 +181,9 @@ EasyType.isPrimitive(new Bigint(1234567894561234569887)); // true
 // 34. Determine whether it is WeakMap
 EasyType.isWeakMap(new WeakMap()); // true
 
+
+// 35. Determine whether it is Empty Array
+EasyType.isEmptyArray([]); // true
+
+
 ```

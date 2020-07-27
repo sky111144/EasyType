@@ -98,6 +98,10 @@ class EasyType {
         return this.typeOf(target) === this.types.SYMBOL;
     }
 
+    isEmptyArray (target) {
+        return this.typeOf(target) === this.types.ARRAY && target.length === 0;
+    }
+
     isArray (target) {
         return this.typeOf(target) === this.types.ARRAY;
     }
