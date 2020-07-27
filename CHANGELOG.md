@@ -1,3 +1,7 @@
+### v1.0.8
++ 1 new types of judgment are supported。
+  1. WeakMap
+
 ### v1.0.7
 + 2 new types of judgment are supported。
   1. Primitive

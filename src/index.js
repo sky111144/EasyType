@@ -16,6 +16,7 @@ class EasyType {
         SET: "[object Set]",
         WEAKSET: "[object WeakSet]",
         MAP: "[object Map]",
+        WEAKMAP: "[object WeakMap]",
         SYMBOL: "[object Symbol]",
         MATH: "[object Math]",
         REGEXP: "[object RegExp]",
@@ -87,6 +88,10 @@ class EasyType {
 
     isMap (target) {
         return this.typeOf(target) === this.types.MAP;
+    }
+
+    isWeakMap (target) {
+        return this.typeOf(target) === this.types.WEAKMAP;
     }
 
     isSymbol (target) {

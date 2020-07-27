@@ -31,3 +31,4 @@ const isNaN = require("./cases/isNaN.test.js");
 const isFalsity = require("./cases/isFalsity.test.js");
 const isBigInt = require("./cases/isBigInt.test.js");
 const isPrimitive = require("./cases/isPrimitive.test.js");
+const isWeakMap = require("./cases/isWeakMap.test.js");
