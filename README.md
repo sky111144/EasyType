@@ -178,7 +178,7 @@ EasyType.isPrimitive(new Symbol(123456)); // true
 EasyType.isPrimitive(new Bigint(1234567894561234569887)); // true
 
 
-// 34. Determine whether it is Primitive
+// 34. Determine whether it is WeakMap
 EasyType.isWeakMap(new WeakMap()); // true
 
 ```
