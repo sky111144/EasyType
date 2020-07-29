@@ -33,6 +33,7 @@ class EasyType {
         FLOAT32ARRAY: "[object Float32Array]",
         FLOAT64ARRAY: "[object Float64Array]",
         BIGINT64ARRAY: "[object BigInt64Array]",
+        BIGUINT64ARRAY: "[object BigUint64Array]",
         ARRAYBUFFER: "[object ArrayBuffer]",
         DATE: "[object Date]",
         BLOB: "[object Blob]"
@@ -167,6 +168,10 @@ class EasyType {
         return this.typeOf(target) === this.types.BIGINT64ARRAY;
     }
 
+    isBigUint64Array (target) {
+        return this.typeOf(target) === this.types.BIGUINT64ARRAY;
+    }
+
     isTypedArray (target) {
         return [
             this.types.INT8ARRAY,
@@ -178,7 +183,8 @@ class EasyType {
             this.types.UINT32ARRAY,
             this.types.FLOAT32ARRAY,
             this.types.FLOAT64ARRAY,
-            this.types.BIGINT64ARRAY
+            this.types.BIGINT64ARRAY,
+            this.types.BIGUINT64ARRAY
         ].indexOf(this.typeOf(target)) !== -1;
     }
 

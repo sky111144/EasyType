@@ -44,4 +44,8 @@ describe("isTypedArray：", function () {
         expect(EasyType.isTypedArray(new BigInt64Array())).to.equal(true);
     });
 
+    it("EasyType.isTypedArray(new BigUint64Array()) should be true", function () {
+        expect(EasyType.isTypedArray(new BigUint64Array())).to.equal(true);
+    });
+
 });
