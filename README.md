@@ -145,6 +145,7 @@ EasyType.isTypedArray(new Int32Array()); // true
 EasyType.isTypedArray(new Uint32Array()); // true
 EasyType.isTypedArray(new Float32Array()); // true
 EasyType.isTypedArray(new Float64Array()); // true
+EasyType.isTypedArray(new BigInt64Array()); // true
 
 
 // 29. Determine whether it is ArrayBuffer
