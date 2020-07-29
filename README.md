@@ -131,7 +131,11 @@ EasyType.isFloat32Array(new Float32Array()); // true
 EasyType.isFloat64Array(new Float64Array()); // true
 
 
-// 27. Determine whether it is TypedArray
+// 27. Determine whether it is BigInt64Array
+EasyType.isBigInt64Array(new BigInt64Array()); // true
+
+
+// 28. Determine whether it is TypedArray
 EasyType.isTypedArray(new Int8Array()); // true
 EasyType.isTypedArray(new Uint8Array()); // true
 EasyType.isTypedArray(new Uint8ClampedArray()); // true
@@ -143,19 +147,19 @@ EasyType.isTypedArray(new Float32Array()); // true
 EasyType.isTypedArray(new Float64Array()); // true
 
 
-// 28. Determine whether it is ArrayBuffer
+// 29. Determine whether it is ArrayBuffer
 EasyType.isArrayBuffer(new ArrayBuffer()); // true
 
 
-// 29. Determine whether it is Date
+// 30. Determine whether it is Date
 EasyType.isDate(new Date()); // true
 
 
-// 30. Determine whether it is NaN
+// 31. Determine whether it is NaN
 EasyType.isNaN(NaN); // true
 
 
-// 31. Determine whether it is Falsity
+// 32. Determine whether it is Falsity
 EasyType.isFalsity(undefined); // true
 EasyType.isFalsity(null); // true
 EasyType.isFalsity(false); // true
@@ -164,11 +168,11 @@ EasyType.isFalsity(''); // true
 EasyType.isFalsity(NaN); // true
 
 
-// 32. Determine whether it is Bigint
+// 33. Determine whether it is Bigint
 EasyType.isBigInt(BigInt(123456)); // true
 
 
-// 33. Determine whether it is Primitive
+// 34. Determine whether it is Primitive
 EasyType.isPrimitive(undefined); // true
 EasyType.isPrimitive(null); // true
 EasyType.isPrimitive(false); // true
@@ -178,11 +182,11 @@ EasyType.isPrimitive(new Symbol(123456)); // true
 EasyType.isPrimitive(new Bigint(1234567894561234569887)); // true
 
 
-// 34. Determine whether it is WeakMap
+// 35. Determine whether it is WeakMap
 EasyType.isWeakMap(new WeakMap()); // true
 
 
-// 35. Determine whether it is Empty Array
+// 36. Determine whether it is Empty Array
 EasyType.isEmptyArray([]); // true
 
 

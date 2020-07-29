@@ -1,3 +1,7 @@
+### v1.0.10
++ 1 new types of judgment are supported。
+  1. BigInt64Array
+
 ### v1.0.9
 + 1 new types of judgment are supported。
   1. Empty Array
