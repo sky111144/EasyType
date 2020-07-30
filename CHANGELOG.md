@@ -1,3 +1,8 @@
+### v1.0.14
++ 2 new types of judgment are supported。
+  1. Positive Infinity
+  2. Negative Infinity
+
 ### v1.0.13
 + 1 new types of judgment are supported。
   1. Iterable

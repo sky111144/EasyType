@@ -43,10 +43,7 @@ EasyType.isSymbol(Symbol("hello world")); // true
 // 7. Determine whether it is Bigint
 EasyType.isBigInt(BigInt(123456)); // true
 
-// 8. Determine whether it is NaN
-EasyType.isNaN(NaN); // true
-
-// 9. Determine whether it is Primitive
+// 8. Determine whether it is Primitive
 EasyType.isPrimitive(undefined); // true
 EasyType.isPrimitive(null); // true
 EasyType.isPrimitive(true); // true
@@ -56,6 +53,21 @@ EasyType.isPrimitive(NaN); // true
 EasyType.isPrimitive(""); // true
 EasyType.isPrimitive(new Symbol(123456)); // true
 EasyType.isPrimitive(new Bigint(1234567894561234569887)); // true
+```
+
+##### Number
+
+```js
+const EasyType = require("@easyprogram/easytype");
+
+// 1. Determine whether it is NaN
+EasyType.isNaN(NaN); // true
+
+// 2. Determine whether it is Positive Infinity
+EasyType.isPositiveInfinity(Infinity); // true
+
+// 3. Determine whether it is Negative Infinity
+EasyType.isNegativeInfinity(-Infinity); // true
 ```
 
 ##### Falsity

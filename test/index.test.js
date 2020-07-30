@@ -37,3 +37,5 @@ const isWeakMap = require("./cases/isWeakMap.test.js");
 const isEmptyArray = require("./cases/isEmptyArray.test.js");
 const isEmptyObject = require("./cases/isEmptyObject.test.js");
 const isIterable = require("./cases/isIterable.test.js");
+const isPositiveInfinity = require("./cases/isPositiveInfinity.test.js");
+const isNegativeInfinity = require("./cases/isNegativeInfinity.test.js");

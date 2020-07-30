@@ -1,6 +1,6 @@
 {
   "name": "@easyprogram/easytype",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "how to typeof easily",
   "main": "dist/easytype.js",
   "directories": {
@@ -16,7 +16,9 @@
     "url": "git+https://github.com/sky111144/EasyType.git"
   },
   "keywords": [
-    "JavaScript"
+    "JavaScript",
+    "type",
+    "typeof"
   ],
   "publishConfig": {
     "access": "public"
