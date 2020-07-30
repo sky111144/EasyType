@@ -196,4 +196,6 @@ EasyType.isWeakMap(new WeakMap()); // true
 EasyType.isEmptyArray([]); // true
 
 
+// 38. Determine whether it is Empty Object
+EasyType.isEmptyObject({}); // true
 ```

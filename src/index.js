@@ -1,7 +1,7 @@
 class EasyType {
     constructor () {}
 
-    version = "1.0.6"
+    version = "1.0.12"
 
     types = {
         NULL: "[object Null]",
@@ -215,6 +215,24 @@ class EasyType {
             this.types.SYMBOL,
             this.types.BIGINT
         ].indexOf(this.typeOf(target)) !== -1;
+    }
+
+    isEmptyObject (target) {
+        if (this.typeOf(target) === this.types.OBJECT) {
+            let count = 0;
+            try {
+                for (let key in target) {
+                    if (target.hasOwnProperty(key)) {
+                        count += 1;
+                    }
+                }
+                return count === 0;
+            } catch (e) {
+                return false;
+            }
+        }
+
+        return false;
     }
 }
 
