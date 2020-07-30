@@ -1,3 +1,7 @@
+### v1.0.13
++ 1 new types of judgment are supported。
+  1. Iterable
+
 ### v1.0.12
 + 1 new types of judgment are supported。
   1. Empty Object

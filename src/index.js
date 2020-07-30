@@ -1,7 +1,7 @@
 class EasyType {
     constructor () {}
 
-    version = "1.0.12"
+    version = "1.0.13"
 
     types = {
         NULL: "[object Null]",
@@ -233,6 +233,14 @@ class EasyType {
         }
 
         return false;
+    }
+
+    isIterable (target) {
+        return [
+            this.types.ARRAY,
+            this.types.SET,
+            this.types.MAP
+        ].indexOf(this.typeOf(target)) !== -1;
     }
 }
 
