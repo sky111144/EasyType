@@ -31,4 +31,8 @@ describe("isFunction：", function () {
     it("EasyType.isFunction(function () {}) should be true", function () {
         expect(EasyType.isFunction(function () {})).to.equal(true);
     });
+
+    it("EasyType.isFunction(() => {}) should be true", function () {
+        expect(EasyType.isFunction(() => {})).to.equal(true);
+    });
 });

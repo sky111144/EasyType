@@ -1,6 +1,6 @@
 {
   "name": "@easyprogram/easytype",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "how to typeof easily",
   "main": "dist/easytype.js",
   "directories": {
@@ -17,8 +17,16 @@
   },
   "keywords": [
     "JavaScript",
+    "ECMAScript",
     "type",
-    "typeof"
+    "typeof",
+    "kindof",
+    "is",
+    "is-type",
+    "arrow function",
+    "type check",
+    "TypedArray",
+    "typedarray"
   ],
   "publishConfig": {
     "access": "public"

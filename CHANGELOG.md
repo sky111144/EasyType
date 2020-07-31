@@ -1,3 +1,7 @@
+### v1.0.15
++ 1 new types of judgment are supported。
+  1. Arrow Function
+
 ### v1.0.14
 + 2 new types of judgment are supported。
   1. Positive Infinity

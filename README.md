@@ -13,7 +13,7 @@ npm i -S @easyprogram/easytype
 
 #### Usage
 
-##### Primitive
+##### 1. Primitive
 
 ```js
 const EasyType = require("@easyprogram/easytype");
@@ -55,7 +55,7 @@ EasyType.isPrimitive(new Symbol(123456)); // true
 EasyType.isPrimitive(new Bigint(1234567894561234569887)); // true
 ```
 
-##### Number
+##### 2. Number
 
 ```js
 const EasyType = require("@easyprogram/easytype");
@@ -70,7 +70,23 @@ EasyType.isPositiveInfinity(Infinity); // true
 EasyType.isNegativeInfinity(-Infinity); // true
 ```
 
-##### Falsity
+
+##### 3. Function
+
+```js
+const EasyType = require("@easyprogram/easytype");
+
+// 1. Determine whether it is Function
+EasyType.isFunction(() => {}); // true
+EasyType.isFunction(function () {}); // true
+
+// 2. Determine whether it is Arrow Function
+EasyType.isArrowFunction(() => {});       // true
+EasyType.isArrowFunction(function () {}); // false
+```
+
+
+##### 4. Falsity
 
 ```js
 const EasyType = require("@easyprogram/easytype");
@@ -84,7 +100,7 @@ EasyType.isFalsity(""); // true
 EasyType.isFalsity(NaN); // true
 ```
 
-##### Error
+##### 5. Error
 
 ```js
 const EasyType = require("@easyprogram/easytype");
@@ -99,9 +115,11 @@ EasyType.isError(new TypeError()) // true
 EasyType.isError(new URIError()) // true
 ```
 
-##### TypedArray
+##### 6. TypedArray
 
 ```js
+const EasyType = require("@easyprogram/easytype");
+
 // 1. Determine whether it is Int8Array
 EasyType.isInt8Array(new Int8Array()); // true
 
@@ -149,7 +167,7 @@ EasyType.isTypedArray(new BigInt64Array()); // true
 EasyType.isTypedArray(new BigUint64Array()); // true
 ```
 
-##### Iterable
+##### 7. Iterable
 
 ```js
 const EasyType = require("@easyprogram/easytype");
@@ -173,7 +191,7 @@ EasyType.isIterable(new Set());
 EasyType.isIterable(new Map());
 ```
 
-##### Other
+##### 8. Other
 
 ```js
 const EasyType = require("@easyprogram/easytype");
@@ -182,33 +200,30 @@ const EasyType = require("@easyprogram/easytype");
 EasyType.isObject({}); // true
 EasyType.isObject({ "key": "hello world" }); // true
 
-// 3. Determine whether it is Empty Object
+// 2. Determine whether it is Empty Object
 EasyType.isEmptyObject({}); // true
 
-// 5. Determine whether it is Function
-EasyType.isFunction(function () {}); // true
-
-// 7. Determine whether it is WeakSet
+// 3. Determine whether it is WeakSet
 EasyType.isWeakSet(new WeakSet()); // true
 
-// 9. Determine whether it is WeakMap
+// 4. Determine whether it is WeakMap
 EasyType.isWeakMap(new WeakMap()); // true
 
-// 10. Determine whether it is Math
+// 5. Determine whether it is Math
 EasyType.isMath(Math); // true
 
-// 11. Determine whether it is RegExp
+// 6. Determine whether it is RegExp
 EasyType.isRegExp(/hello world/g); // true
 
-// 12. Determine whether it is Promise
+// 7. Determine whether it is Promise
 EasyType.isPromise(new Promise(function () {})); // true
 
-// 13. Determine whether it is JSON
+// 8. Determine whether it is JSON
 EasyType.isJSON(JSON); // true
 
-// 14. Determine whether it is ArrayBuffer
+// 9. Determine whether it is ArrayBuffer
 EasyType.isArrayBuffer(new ArrayBuffer()); // true
 
-// 15. Determine whether it is Date
+// 10. Determine whether it is Date
 EasyType.isDate(new Date()); // true
 ```

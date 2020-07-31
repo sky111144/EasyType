@@ -1,7 +1,7 @@
 class EasyType {
     constructor () {}
 
-    version = "1.0.14"
+    version = "1.0.15"
 
     types = {
         NULL: "[object Null]",
@@ -35,8 +35,7 @@ class EasyType {
         BIGINT64ARRAY: "[object BigInt64Array]",
         BIGUINT64ARRAY: "[object BigUint64Array]",
         ARRAYBUFFER: "[object ArrayBuffer]",
-        DATE: "[object Date]",
-        BLOB: "[object Blob]"
+        DATE: "[object Date]"
     }
 
     typeOf (target) {
@@ -96,6 +95,10 @@ class EasyType {
         return this.typeOf(target) === this.types.FUNCTION;
     }
 
+    isArrowFunction (target) {
+        return this.isFunction(target) && !this.isObject(target && target.prototype);
+    }
+
     isSet (target) {
         return this.typeOf(target) === this.types.SET;
     }
@@ -117,7 +120,7 @@ class EasyType {
     }
 
     isEmptyArray (target) {
-        return this.typeOf(target) === this.types.ARRAY && target.length === 0;
+        return this.isArray(target) && target.length === 0;
     }
 
     isArray (target) {
