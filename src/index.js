@@ -1,7 +1,7 @@
 class EasyType {
     constructor () {}
 
-    version = "1.0.16"
+    version = "1.0.17"
 
     types = {
         NULL: "[object Null]",
@@ -99,12 +99,16 @@ class EasyType {
         return this.typeOf(target) === this.types.SET;
     }
 
-    isWeakSet (target) {
-        return this.typeOf(target) === this.types.WEAKSET;
-    }
-
     isMap (target) {
         return this.typeOf(target) === this.types.MAP;
+    }
+
+    isWeakType (target) {
+        return this.isWeakMap(target) || this.isWeakSet(target);
+    }
+
+    isWeakSet (target) {
+        return this.typeOf(target) === this.types.WEAKSET;
     }
 
     isWeakMap (target) {
@@ -212,8 +216,8 @@ class EasyType {
     }
 
     isFalsity (target) {
-        return this.types.NULL === this.typeOf(target) ||
-               this.types.UNDEFINED === this.typeOf(target) ||
+        return this.isNull(target) ||
+               this.isUndefined(target) ||
                target === false ||
                target === 0 ||
                target === "" ||

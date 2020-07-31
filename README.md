@@ -101,6 +101,7 @@ EasyType.isObject({ "key": "hello world" }); // true
 EasyType.isEmptyObject({}); // true
 ```
 
+
 ##### 5. Falsity
 
 ```js
@@ -115,7 +116,20 @@ EasyType.isFalsity(""); // true
 EasyType.isFalsity(NaN); // true
 ```
 
-##### 6. Error
+
+##### 6. WeakType
+
+```js
+const EasyType = require("@easyprogram/easytype");
+
+// 1. Determine whether it is WeakSet
+EasyType.isWeakSet(new WeakSet()); // true
+
+// 2. Determine whether it is WeakMap
+EasyType.isWeakMap(new WeakMap()); // true
+```
+
+##### 7. Error
 
 ```js
 const EasyType = require("@easyprogram/easytype");
@@ -130,7 +144,7 @@ EasyType.isError(new TypeError()) // true
 EasyType.isError(new URIError()) // true
 ```
 
-##### 7. TypedArray
+##### 8. TypedArray
 
 ```js
 const EasyType = require("@easyprogram/easytype");
@@ -182,7 +196,7 @@ EasyType.isTypedArray(new BigInt64Array()); // true
 EasyType.isTypedArray(new BigUint64Array()); // true
 ```
 
-##### 8. Iterable
+##### 9. Iterable
 
 ```js
 const EasyType = require("@easyprogram/easytype");
@@ -206,32 +220,26 @@ EasyType.isIterable(new Set());
 EasyType.isIterable(new Map());
 ```
 
-##### 9. Other
+##### 10. Other
 
 ```js
 const EasyType = require("@easyprogram/easytype");
 
-// 1. Determine whether it is WeakSet
-EasyType.isWeakSet(new WeakSet()); // true
-
-// 2. Determine whether it is WeakMap
-EasyType.isWeakMap(new WeakMap()); // true
-
-// 3. Determine whether it is Math
+// 1. Determine whether it is Math
 EasyType.isMath(Math); // true
 
-// 4. Determine whether it is RegExp
+// 2. Determine whether it is RegExp
 EasyType.isRegExp(/hello world/g); // true
 
-// 5. Determine whether it is Promise
+// 3. Determine whether it is Promise
 EasyType.isPromise(new Promise(function () {})); // true
 
-// 6. Determine whether it is JSON
+// 4. Determine whether it is JSON
 EasyType.isJSON(JSON); // true
 
-// 7. Determine whether it is ArrayBuffer
+// 5. Determine whether it is ArrayBuffer
 EasyType.isArrayBuffer(new ArrayBuffer()); // true
 
-// 8. Determine whether it is Date
+// 6. Determine whether it is Date
 EasyType.isDate(new Date()); // true
 ```

@@ -41,3 +41,4 @@ const isPositiveInfinity = require("./cases/isPositiveInfinity.test.js");
 const isNegativeInfinity = require("./cases/isNegativeInfinity.test.js");
 const isArrowFunction = require("./cases/isArrowFunction.test.js");
 const isMaxValue = require("./cases/isMaxValue.test.js");
+const isWeakType = require("./cases/isWeakType.test.js");
