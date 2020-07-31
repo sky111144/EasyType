@@ -101,102 +101,7 @@ EasyType.isObject({ "key": "hello world" }); // true
 EasyType.isEmptyObject({}); // true
 ```
 
-
-##### 5. Falsity
-
-```js
-const EasyType = require("@easyprogram/easytype");
-
-// Determine whether it is Falsity
-EasyType.isFalsity(undefined); // true
-EasyType.isFalsity(null); // true
-EasyType.isFalsity(false); // true
-EasyType.isFalsity(0); // true
-EasyType.isFalsity(""); // true
-EasyType.isFalsity(NaN); // true
-```
-
-
-##### 6. WeakType
-
-```js
-const EasyType = require("@easyprogram/easytype");
-
-// 1. Determine whether it is WeakSet
-EasyType.isWeakSet(new WeakSet()); // true
-
-// 2. Determine whether it is WeakMap
-EasyType.isWeakMap(new WeakMap()); // true
-```
-
-##### 7. Error
-
-```js
-const EasyType = require("@easyprogram/easytype");
-
-// Determine whether it is Error
-EasyType.isError(new Error()); // true
-EasyType.isError(new EvalError())  // true
-EasyType.isError(new RangeError()) // true
-EasyType.isError(new ReferenceError()) // true
-EasyType.isError(new SyntaxError()) // true
-EasyType.isError(new TypeError()) // true
-EasyType.isError(new URIError()) // true
-```
-
-##### 8. TypedArray
-
-```js
-const EasyType = require("@easyprogram/easytype");
-
-// 1. Determine whether it is Int8Array
-EasyType.isInt8Array(new Int8Array()); // true
-
-// 2. Determine whether it is Uint8Array
-EasyType.isUint8Array(new Uint8Array()); // true
-
-// 3. Determine whether it is Uint8ClampedArray
-EasyType.isUint8ClampedArray(new Uint8ClampedArray()); // true
-
-// 4. Determine whether it is Int16Array
-EasyType.isInt16Array(new Int16Array()); // true
-
-// 5. Determine whether it is Uint16Array
-EasyType.isUint16Array(new Uint16Array()); // true
-
-// 6. Determine whether it is Int32Array
-EasyType.isInt32Array(new Int32Array()); // true
-
-// 7. Determine whether it is Uint32Array
-EasyType.isUint32Array(new Uint32Array()); // true
-
-// 8. Determine whether it is Float32Array
-EasyType.isFloat32Array(new Float32Array()); // true
-
-// 9. Determine whether it is Float64Array
-EasyType.isFloat64Array(new Float64Array()); // true
-
-// 10. Determine whether it is BigInt64Array
-EasyType.isBigInt64Array(new BigInt64Array()); // true
-
-// 11. Determine whether it is BigUint64Array
-EasyType.isBigUint64Array(new BigUint64Array()); // true
-
-// 12. Determine whether it is TypedArray
-EasyType.isTypedArray(new Int8Array()); // true
-EasyType.isTypedArray(new Uint8Array()); // true
-EasyType.isTypedArray(new Uint8ClampedArray()); // true
-EasyType.isTypedArray(new Int16Array()); // true
-EasyType.isTypedArray(new Uint16Array()); // true
-EasyType.isTypedArray(new Int32Array()); // true
-EasyType.isTypedArray(new Uint32Array()); // true
-EasyType.isTypedArray(new Float32Array()); // true
-EasyType.isTypedArray(new Float64Array()); // true
-EasyType.isTypedArray(new BigInt64Array()); // true
-EasyType.isTypedArray(new BigUint64Array()); // true
-```
-
-##### 9. Iterable
+##### 5. Iterable
 
 ```js
 const EasyType = require("@easyprogram/easytype");
@@ -220,6 +125,107 @@ EasyType.isIterable(new Set());
 EasyType.isIterable(new Map());
 ```
 
+
+##### 6. Falsity
+
+```js
+const EasyType = require("@easyprogram/easytype");
+
+// Determine whether it is Falsity
+EasyType.isFalsity(undefined); // true
+EasyType.isFalsity(null); // true
+EasyType.isFalsity(false); // true
+EasyType.isFalsity(0); // true
+EasyType.isFalsity(""); // true
+EasyType.isFalsity(NaN); // true
+```
+
+
+##### 7. WeakType
+
+```js
+const EasyType = require("@easyprogram/easytype");
+
+// 1. Determine whether it is WeakSet
+EasyType.isWeakSet(new WeakSet()); // true
+
+// 2. Determine whether it is WeakMap
+EasyType.isWeakMap(new WeakMap()); // true
+```
+
+##### 8. Error
+
+```js
+const EasyType = require("@easyprogram/easytype");
+
+// Determine whether it is Error
+EasyType.isError(new Error()); // true
+EasyType.isError(new EvalError())  // true
+EasyType.isError(new RangeError()) // true
+EasyType.isError(new ReferenceError()) // true
+EasyType.isError(new SyntaxError()) // true
+EasyType.isError(new TypeError()) // true
+EasyType.isError(new URIError()) // true
+```
+
+##### 9. Binary
+
+```js
+const EasyType = require("@easyprogram/easytype");
+
+// 1. Determine whether it is ArrayBuffer
+EasyType.isArrayBuffer(new ArrayBuffer()); // true
+
+// 2. Determine whether it is DataView
+EasyType.isDataView(new DataView(new ArrayBuffer())); // true
+
+// 3. Determine whether it is Int8Array
+EasyType.isInt8Array(new Int8Array()); // true
+
+// 4. Determine whether it is Uint8Array
+EasyType.isUint8Array(new Uint8Array()); // true
+
+// 5. Determine whether it is Uint8ClampedArray
+EasyType.isUint8ClampedArray(new Uint8ClampedArray()); // true
+
+// 6. Determine whether it is Int16Array
+EasyType.isInt16Array(new Int16Array()); // true
+
+// 7. Determine whether it is Uint16Array
+EasyType.isUint16Array(new Uint16Array()); // true
+
+// 8. Determine whether it is Int32Array
+EasyType.isInt32Array(new Int32Array()); // true
+
+// 9. Determine whether it is Uint32Array
+EasyType.isUint32Array(new Uint32Array()); // true
+
+// 10. Determine whether it is Float32Array
+EasyType.isFloat32Array(new Float32Array()); // true
+
+// 11. Determine whether it is Float64Array
+EasyType.isFloat64Array(new Float64Array()); // true
+
+// 12. Determine whether it is BigInt64Array
+EasyType.isBigInt64Array(new BigInt64Array()); // true
+
+// 13. Determine whether it is BigUint64Array
+EasyType.isBigUint64Array(new BigUint64Array()); // true
+
+// 14. Determine whether it is TypedArray
+EasyType.isTypedArray(new Int8Array()); // true
+EasyType.isTypedArray(new Uint8Array()); // true
+EasyType.isTypedArray(new Uint8ClampedArray()); // true
+EasyType.isTypedArray(new Int16Array()); // true
+EasyType.isTypedArray(new Uint16Array()); // true
+EasyType.isTypedArray(new Int32Array()); // true
+EasyType.isTypedArray(new Uint32Array()); // true
+EasyType.isTypedArray(new Float32Array()); // true
+EasyType.isTypedArray(new Float64Array()); // true
+EasyType.isTypedArray(new BigInt64Array()); // true
+EasyType.isTypedArray(new BigUint64Array()); // true
+```
+
 ##### 10. Other
 
 ```js
@@ -237,9 +243,6 @@ EasyType.isPromise(new Promise(function () {})); // true
 // 4. Determine whether it is JSON
 EasyType.isJSON(JSON); // true
 
-// 5. Determine whether it is ArrayBuffer
-EasyType.isArrayBuffer(new ArrayBuffer()); // true
-
-// 6. Determine whether it is Date
+// 5. Determine whether it is Date
 EasyType.isDate(new Date()); // true
 ```

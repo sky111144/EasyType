@@ -1,7 +1,7 @@
 class EasyType {
     constructor () {}
 
-    version = "1.0.17"
+    version = "1.0.18"
 
     types = {
         NULL: "[object Null]",
@@ -35,6 +35,7 @@ class EasyType {
         BIGINT64ARRAY: "[object BigInt64Array]",
         BIGUINT64ARRAY: "[object BigUint64Array]",
         ARRAYBUFFER: "[object ArrayBuffer]",
+        DATAVIEW: "[object DataView]",
         DATE: "[object Date]"
     }
 
@@ -209,6 +210,10 @@ class EasyType {
 
     isArrayBuffer (target) {
         return this.typeOf(target) === this.types.ARRAYBUFFER;
+    }
+
+    isDataView (target) {
+        return this.typeOf(target) === this.types.DATAVIEW;
     }
 
     isDate (target) {

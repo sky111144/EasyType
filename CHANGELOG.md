@@ -1,3 +1,7 @@
+### v1.0.18
++ 1 new types of judgment are supported。
+  1. DataView
+
 ### v1.0.17
 + 1 new types of judgment are supported。
   1. WeakType
