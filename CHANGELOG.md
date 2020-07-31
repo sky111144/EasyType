@@ -1,3 +1,7 @@
+### v1.0.19
++ 1 new types of judgment are supported。
+  1. Number.MAX_SAFE_INTEGER
+
 ### v1.0.18
 + 1 new types of judgment are supported。
   1. DataView
@@ -8,7 +12,7 @@
 
 ### v1.0.16
 + 1 new types of judgment are supported。
-  1. Max Value
+  1. Number.MAX_VALUE
 
 ### v1.0.15
 + 1 new types of judgment are supported。
@@ -16,8 +20,8 @@
 
 ### v1.0.14
 + 2 new types of judgment are supported。
-  1. Positive Infinity
-  2. Negative Infinity
+  1. Number.POSITIVE_INFINITY
+  2. Number.NEGATIVE_INFINITY
 
 ### v1.0.13
 + 1 new types of judgment are supported。

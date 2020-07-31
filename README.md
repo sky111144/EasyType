@@ -63,14 +63,17 @@ const EasyType = require("@easyprogram/easytype");
 // 1. Determine whether it is NaN
 EasyType.isNaN(NaN); // true
 
-// 2. Determine whether it is Positive Infinity
+// 2. Determine whether it is Number.POSITIVE_INFINITY
 EasyType.isPositiveInfinity(Infinity); // true
 
-// 3. Determine whether it is Negative Infinity
+// 3. Determine whether it is Number.NEGATIVE_INFINITY
 EasyType.isNegativeInfinity(-Infinity); // true
 
-// 4. Determine whether it is Max Value
+// 4. Determine whether it is Number.MAX_VALUE
 EasyType.isMaxValue(1.7976931348623157e+308); // true
+
+// 5. Determine whether it is Number.MAX_SAFE_INTEGER
+EasyType.isMaxSafeInteger(9007199254740991); // true
 ```
 
 
