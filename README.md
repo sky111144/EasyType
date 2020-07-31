@@ -151,6 +151,10 @@ EasyType.isWeakSet(new WeakSet()); // true
 
 // 2. Determine whether it is WeakMap
 EasyType.isWeakMap(new WeakMap()); // true
+
+// 3. Determine whether it is WeakType
+EasyType.isWeakType(new WeakMap()); // true
+EasyType.isWeakType(new WeakSet()); // true
 ```
 
 ##### 8. Error
