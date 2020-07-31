@@ -1,3 +1,7 @@
+### v1.0.20
++ 1 new types of judgment are supported。
+  1. Number.EPSILON
+
 ### v1.0.19
 + 1 new types of judgment are supported。
   1. Number.MAX_SAFE_INTEGER

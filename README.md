@@ -74,6 +74,9 @@ EasyType.isMaxValue(1.7976931348623157e+308); // true
 
 // 5. Determine whether it is Number.MAX_SAFE_INTEGER
 EasyType.isMaxSafeInteger(9007199254740991); // true
+
+// 6. Determine whether it is Number.EPSILON
+EasyType.isEpsilon(Math.pow(2, -52)); // true
 ```
 
 

@@ -1,7 +1,7 @@
 class EasyType {
     constructor () {}
 
-    version = "1.0.19"
+    version = "1.0.20"
 
     types = {
         NULL: "[object Null]",
@@ -72,7 +72,11 @@ class EasyType {
     }
 
     isMaxSafeInteger (target) {
-        return this.isNumber(target) && target === Number.MAX_SAFE_INTEGER
+        return this.isNumber(target) && target === Number.MAX_SAFE_INTEGER;
+    }
+
+    isEpsilon (target) {
+        return this.isNumber(target) && target === Number.EPSILON;
     }
 
     isNaN (target) {
