@@ -1,3 +1,7 @@
+### v1.0.16
++ 1 new types of judgment are supported。
+  1. Max Value
+
 ### v1.0.15
 + 1 new types of judgment are supported。
   1. Arrow Function

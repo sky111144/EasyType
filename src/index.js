@@ -1,7 +1,7 @@
 class EasyType {
     constructor () {}
 
-    version = "1.0.15"
+    version = "1.0.16"
 
     types = {
         NULL: "[object Null]",
@@ -59,19 +59,15 @@ class EasyType {
     }
 
     isPositiveInfinity (target) {
-        try {
-            return this.typeOf(target) === this.types.NUMBER && target === Number.POSITIVE_INFINITY;
-        } catch (e) {
-            return false;
-        }
+        return this.isNumber(target) && target === Number.POSITIVE_INFINITY;
     }
 
     isNegativeInfinity (target) {
-        try {
-            return this.typeOf(target) === this.types.NUMBER && target === Number.NEGATIVE_INFINITY;
-        } catch (e) {
-            return false;
-        }
+        return this.isNumber(target) && target === Number.NEGATIVE_INFINITY;
+    }
+
+    isMaxValue (target) {
+        return this.isNumber(target) && target === Number.MAX_VALUE;
     }
 
     isNaN (target) {

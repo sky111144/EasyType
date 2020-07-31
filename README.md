@@ -68,6 +68,9 @@ EasyType.isPositiveInfinity(Infinity); // true
 
 // 3. Determine whether it is Negative Infinity
 EasyType.isNegativeInfinity(-Infinity); // true
+
+// 4. Determine whether it is Max Value
+EasyType.isMaxValue(1.7976931348623157e+308); // true
 ```
 
 
