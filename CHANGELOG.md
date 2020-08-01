@@ -1,3 +1,7 @@
+### v1.0.21
++ 1 new types of judgment are supported。
+  1. Normal Function
+
 ### v1.0.20
 + 1 new types of judgment are supported。
   1. Number.EPSILON

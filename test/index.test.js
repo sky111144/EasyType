@@ -45,3 +45,4 @@ const isWeakType = require("./cases/isWeakType.test.js");
 const isDataView = require("./cases/isDataView.test.js");
 const isMaxSafeInteger = require("./cases/isMaxSafeInteger.test.js");
 const isEpsilon = require("./cases/isEpsilon.test.js");
+const isNormalFunction = require("./cases/isNormalFunction.test.js");

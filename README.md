@@ -92,6 +92,10 @@ EasyType.isFunction(function () {}); // true
 // 2. Determine whether it is Arrow Function
 EasyType.isArrowFunction(() => {});       // true
 EasyType.isArrowFunction(function () {}); // false
+
+// 3. Determine whether it is Normal Function
+EasyType.isNormalFunction(() => {});       // false
+EasyType.isNormalFunction(function () {}); // true
 ```
 
 ##### 4. Object

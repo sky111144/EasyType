@@ -1,7 +1,7 @@
 class EasyType {
     constructor () {}
 
-    version = "1.0.20"
+    version = "1.0.21"
 
     types = {
         NULL: "[object Null]",
@@ -98,6 +98,10 @@ class EasyType {
 
     isFunction (target) {
         return this.typeOf(target) === this.types.FUNCTION;
+    }
+
+    isNormalFunction (target) {
+        return this.isFunction(target) && this.isObject(target && target.prototype);
     }
 
     isArrowFunction (target) {
