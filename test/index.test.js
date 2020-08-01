@@ -46,3 +46,4 @@ const isDataView = require("./cases/isDataView.test.js");
 const isMaxSafeInteger = require("./cases/isMaxSafeInteger.test.js");
 const isEpsilon = require("./cases/isEpsilon.test.js");
 const isNormalFunction = require("./cases/isNormalFunction.test.js");
+const isInfinity = require("./cases/isInfinity.test.js");

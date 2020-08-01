@@ -1,7 +1,7 @@
 class EasyType {
     constructor () {}
 
-    version = "1.0.21"
+    version = "1.0.22"
 
     types = {
         NULL: "[object Null]",
@@ -57,6 +57,10 @@ class EasyType {
 
     isNumber (target) {
         return this.typeOf(target) === this.types.NUMBER;
+    }
+
+    isInfinity (target) {
+        return this.isPositiveInfinity(target) || this.isNegativeInfinity(target);
     }
 
     isPositiveInfinity (target) {

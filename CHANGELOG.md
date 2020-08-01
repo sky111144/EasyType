@@ -1,3 +1,7 @@
+### v1.0.22
++ 1 new types of judgment are supported。
+  1. Infinity
+
 ### v1.0.21
 + 1 new types of judgment are supported。
   1. Normal Function
