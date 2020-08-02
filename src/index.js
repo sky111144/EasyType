@@ -1,7 +1,7 @@
 class EasyType {
     constructor () {}
 
-    version = "1.0.23"
+    version = "1.0.24"
 
     types = {
         NULL: "[object Null]",
@@ -37,7 +37,8 @@ class EasyType {
         ARRAYBUFFER: "[object ArrayBuffer]",
         DATAVIEW: "[object DataView]",
         DATE: "[object Date]",
-        GLOBAL: "[object global]"
+        GLOBAL: "[object global]",
+        WINDOW: "[object Window]"
     }
 
     typeOf (target) {
@@ -286,6 +287,10 @@ class EasyType {
 
     isGlobal (target) {
         return this.typeOf(target) === this.types.GLOBAL;
+    }
+
+    isWindow (target) {
+        return this.typeOf(target) === this.types.WINDOW;
     }
 }
 

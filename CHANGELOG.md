@@ -1,3 +1,7 @@
+### v1.0.24
++ feature list:
+  1. isWindow
+
 ### v1.0.23
 + feature list:
   1. global

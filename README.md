@@ -251,6 +251,9 @@ const EasyType = require("@easyprogram/easytype");
 
 // 1. Determine whether it is global in Node
 EasyType.isGlobal(global); // true
+
+// 2. Determine whether it is Window in Browser
+EasyType.isWindow(window); // true
 ```
 
 ##### 11. Other
