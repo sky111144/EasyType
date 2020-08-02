@@ -1,7 +1,7 @@
 class EasyType {
     constructor () {}
 
-    version = "1.0.22"
+    version = "1.0.23"
 
     types = {
         NULL: "[object Null]",
@@ -36,7 +36,8 @@ class EasyType {
         BIGUINT64ARRAY: "[object BigUint64Array]",
         ARRAYBUFFER: "[object ArrayBuffer]",
         DATAVIEW: "[object DataView]",
-        DATE: "[object Date]"
+        DATE: "[object Date]",
+        GLOBAL: "[object global]"
     }
 
     typeOf (target) {
@@ -281,6 +282,10 @@ class EasyType {
             this.types.SET,
             this.types.MAP
         ].indexOf(this.typeOf(target)) !== -1;
+    }
+
+    isGlobal (target) {
+        return this.typeOf(target) === this.types.GLOBAL;
     }
 }
 

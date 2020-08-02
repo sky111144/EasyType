@@ -1,81 +1,85 @@
+### v1.0.23
++ feature list:
+  1. global
+
 ### v1.0.22
-+ 1 new types of judgment are supported。
++ feature list:
   1. Infinity
 
 ### v1.0.21
-+ 1 new types of judgment are supported。
++ feature list:
   1. Normal Function
 
 ### v1.0.20
-+ 1 new types of judgment are supported。
++ feature list:
   1. Number.EPSILON
 
 ### v1.0.19
-+ 1 new types of judgment are supported。
++ feature list:
   1. Number.MAX_SAFE_INTEGER
 
 ### v1.0.18
-+ 1 new types of judgment are supported。
++ feature list:
   1. DataView
 
 ### v1.0.17
-+ 1 new types of judgment are supported。
++ feature list:
   1. WeakType
 
 ### v1.0.16
-+ 1 new types of judgment are supported。
++ feature list:
   1. Number.MAX_VALUE
 
 ### v1.0.15
-+ 1 new types of judgment are supported。
++ feature list:
   1. Arrow Function
 
 ### v1.0.14
-+ 2 new types of judgment are supported。
++ feature list:
   1. Number.POSITIVE_INFINITY
   2. Number.NEGATIVE_INFINITY
 
 ### v1.0.13
-+ 1 new types of judgment are supported。
++ feature list:
   1. Iterable
 
 ### v1.0.12
-+ 1 new types of judgment are supported。
++ feature list:
   1. Empty Object
 
 ### v1.0.11
-+ 1 new types of judgment are supported。
++ feature list:
   1. BigUint64Array
 
 ### v1.0.10
-+ 1 new types of judgment are supported。
++ feature list:
   1. BigInt64Array
 
 ### v1.0.9
-+ 1 new types of judgment are supported。
++ feature list:
   1. Empty Array
 
 ### v1.0.8
-+ 1 new types of judgment are supported。
++ feature list:
   1. WeakMap
 
 ### v1.0.7
-+ 2 new types of judgment are supported。
++ feature list:
   1. Primitive
   2. BigInt
 
 ### v1.0.6
-+ 3 new types of judgment are supported。
++ feature list:
   1. ArrayBuffer
   2. NaN
   3. Falsity
 
 ### v1.0.5
-+ 1 new types of judgment are supported。
++ feature list:
   1. Date
 
 ### v1.0.4
-+ 10 new types of judgment are supported。
++ feature list:
   1. Int8Array
   2. Uint8Array
   3. Uint8ClampedArray
@@ -88,14 +92,14 @@
   10. TypedArray
 
 ### v1.0.3
-+ 3 new types of judgment are supported。
++ feature list:
   1. Error
   2. Map
   3. WeakSet
 
 
 ### v1.0.2
-+ 14 types of judgment are supported。
++ feature list:
   1. Null
   2. Undefined
   3. Boolean

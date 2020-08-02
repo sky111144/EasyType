@@ -47,3 +47,4 @@ const isMaxSafeInteger = require("./cases/isMaxSafeInteger.test.js");
 const isEpsilon = require("./cases/isEpsilon.test.js");
 const isNormalFunction = require("./cases/isNormalFunction.test.js");
 const isInfinity = require("./cases/isInfinity.test.js");
+const isGlobal = require("./cases/isGlobal.test.js");

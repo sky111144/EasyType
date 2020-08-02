@@ -51,8 +51,8 @@ EasyType.isPrimitive(false); // true
 EasyType.isPrimitive(0); // true
 EasyType.isPrimitive(NaN); // true
 EasyType.isPrimitive(""); // true
-EasyType.isPrimitive(new Symbol(123456)); // true
-EasyType.isPrimitive(new Bigint(1234567894561234569887)); // true
+EasyType.isPrimitive(Symbol(123456)); // true
+EasyType.isPrimitive(BigInt(1234567894561234569887)); // true
 ```
 
 ##### 2. Number
@@ -244,7 +244,16 @@ EasyType.isTypedArray(new BigInt64Array()); // true
 EasyType.isTypedArray(new BigUint64Array()); // true
 ```
 
-##### 10. Other
+##### 10. Global
+
+```js
+const EasyType = require("@easyprogram/easytype");
+
+// 1. Determine whether it is global in Node
+EasyType.isGlobal(global); // true
+```
+
+##### 11. Other
 
 ```js
 const EasyType = require("@easyprogram/easytype");
