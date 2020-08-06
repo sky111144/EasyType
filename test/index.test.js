@@ -48,3 +48,4 @@ const isEpsilon = require("./cases/isEpsilon.test.js");
 const isNormalFunction = require("./cases/isNormalFunction.test.js");
 const isInfinity = require("./cases/isInfinity.test.js");
 const isGlobal = require("./cases/isGlobal.test.js");
+const isNormalNumber = require("./cases/isNormalNumber.test.js");

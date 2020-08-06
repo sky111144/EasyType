@@ -1,6 +1,10 @@
+### v1.0.25
++ feature list:
+  1. Normal Number
+
 ### v1.0.24
 + feature list:
-  1. isWindow
+  1. Window
 
 ### v1.0.23
 + feature list:

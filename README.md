@@ -60,26 +60,37 @@ EasyType.isPrimitive(BigInt(1234567894561234569887)); // true
 ```js
 const EasyType = require("@easyprogram/easytype");
 
-// 1. Determine whether it is NaN
+// 1. Determine whether it is Normal Number
+EasyType.isNormalNumber(NaN); // false
+EasyType.isNormalNumber(Infinity); // false
+EasyType.isNormalNumber(-Infinity); // false
+EasyType.isNormalNumber(1.7976931348623157e+308); // false
+EasyType.isNormalNumber(9007199254740991); // false
+EasyType.isNormalNumber(Math.pow(2, -52)); // false
+EasyType.isNormalNumber(12345); // true
+EasyType.isNormalNumber(-12345); // true
+EasyType.isNormalNumber(0.999999); // true
+
+// 2. Determine whether it is NaN
 EasyType.isNaN(NaN); // true
 
-// 2. Determine whether it is Infinity
+// 3. Determine whether it is Infinity
 EasyType.isInfinity(Infinity); // true
 EasyType.isInfinity(-Infinity); // true
 
-// 3. Determine whether it is Number.POSITIVE_INFINITY
+// 4. Determine whether it is Number.POSITIVE_INFINITY
 EasyType.isPositiveInfinity(Infinity); // true
 
-// 4. Determine whether it is Number.NEGATIVE_INFINITY
+// 5. Determine whether it is Number.NEGATIVE_INFINITY
 EasyType.isNegativeInfinity(-Infinity); // true
 
-// 5. Determine whether it is Number.MAX_VALUE
+// 6. Determine whether it is Number.MAX_VALUE
 EasyType.isMaxValue(1.7976931348623157e+308); // true
 
-// 6. Determine whether it is Number.MAX_SAFE_INTEGER
+// 7. Determine whether it is Number.MAX_SAFE_INTEGER
 EasyType.isMaxSafeInteger(9007199254740991); // true
 
-// 7. Determine whether it is Number.EPSILON
+// 8. Determine whether it is Number.EPSILON
 EasyType.isEpsilon(Math.pow(2, -52)); // true
 ```
 
