@@ -1,3 +1,7 @@
+### v1.0.26
++ feature list:
+  1. Special Number
+
 ### v1.0.25
 + feature list:
   1. Normal Number

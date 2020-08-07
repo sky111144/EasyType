@@ -49,3 +49,4 @@ const isNormalFunction = require("./cases/isNormalFunction.test.js");
 const isInfinity = require("./cases/isInfinity.test.js");
 const isGlobal = require("./cases/isGlobal.test.js");
 const isNormalNumber = require("./cases/isNormalNumber.test.js");
+const isSpecialNumber = require("./cases/isSpecialNumber.test.js");

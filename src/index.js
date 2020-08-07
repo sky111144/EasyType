@@ -1,7 +1,7 @@
 class EasyType {
     constructor () {}
 
-    version = "1.0.25"
+    version = "1.0.26"
 
     types = {
         NULL: "[object Null]",
@@ -69,6 +69,16 @@ class EasyType {
             Number.MAX_SAFE_INTEGER,
             Number.EPSILON
         ].indexOf(target) === -1;
+    }
+
+    isSpecialNumber (target) {
+        return this.isNumber(target) && (this.isNaN(target) || [
+            Number.POSITIVE_INFINITY,
+            Number.NEGATIVE_INFINITY,
+            Number.MAX_VALUE,
+            Number.MAX_SAFE_INTEGER,
+            Number.EPSILON
+        ].indexOf(target) !== -1);
     }
 
     isInfinity (target) {

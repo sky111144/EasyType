@@ -71,26 +71,37 @@ EasyType.isNormalNumber(12345); // true
 EasyType.isNormalNumber(-12345); // true
 EasyType.isNormalNumber(0.999999); // true
 
-// 2. Determine whether it is NaN
+// 2. Determine whether it is Special Number
+EasyType.isSpecialNumber(NaN); // true
+EasyType.isSpecialNumber(Infinity); // true
+EasyType.isSpecialNumber(-Infinity); // true
+EasyType.isSpecialNumber(1.7976931348623157e+308); // true
+EasyType.isSpecialNumber(9007199254740991); // true
+EasyType.isSpecialNumber(Math.pow(2, -52)); // true
+EasyType.isSpecialNumber(12345); // false
+EasyType.isSpecialNumber(-12345); // false
+EasyType.isSpecialNumber(0.999999); // false
+
+// 3. Determine whether it is NaN
 EasyType.isNaN(NaN); // true
 
-// 3. Determine whether it is Infinity
+// 4. Determine whether it is Infinity
 EasyType.isInfinity(Infinity); // true
 EasyType.isInfinity(-Infinity); // true
 
-// 4. Determine whether it is Number.POSITIVE_INFINITY
+// 5. Determine whether it is Number.POSITIVE_INFINITY
 EasyType.isPositiveInfinity(Infinity); // true
 
-// 5. Determine whether it is Number.NEGATIVE_INFINITY
+// 6. Determine whether it is Number.NEGATIVE_INFINITY
 EasyType.isNegativeInfinity(-Infinity); // true
 
-// 6. Determine whether it is Number.MAX_VALUE
+// 7. Determine whether it is Number.MAX_VALUE
 EasyType.isMaxValue(1.7976931348623157e+308); // true
 
-// 7. Determine whether it is Number.MAX_SAFE_INTEGER
+// 8. Determine whether it is Number.MAX_SAFE_INTEGER
 EasyType.isMaxSafeInteger(9007199254740991); // true
 
-// 8. Determine whether it is Number.EPSILON
+// 9. Determine whether it is Number.EPSILON
 EasyType.isEpsilon(Math.pow(2, -52)); // true
 ```
 
