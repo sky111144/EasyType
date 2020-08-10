@@ -124,7 +124,19 @@ EasyType.isNormalFunction(() => {});       // false
 EasyType.isNormalFunction(function () {}); // true
 ```
 
-##### 4. Object
+####$ 4. Array
+
+```js
+const EasyType = require("@easyprogram/easytype");
+
+// 1. Determine whether it is Array of Number
+EasyType.isArrayOfNumber([]); // false
+EasyType.isArrayOfNumber(['0', '1', '2']); // false
+EasyType.isArrayOfNumber(['0', true, false]); // false
+EasyType.isArrayOfNumber([1, 2, 3]); // true
+```
+
+##### 5. Object
 
 ```js
 const EasyType = require("@easyprogram/easytype");
@@ -137,7 +149,7 @@ EasyType.isObject({ "key": "hello world" }); // true
 EasyType.isEmptyObject({}); // true
 ```
 
-##### 5. Iterable
+##### 6. Iterable
 
 ```js
 const EasyType = require("@easyprogram/easytype");
@@ -162,7 +174,7 @@ EasyType.isIterable(new Map());
 ```
 
 
-##### 6. Falsity
+##### 7. Falsity
 
 ```js
 const EasyType = require("@easyprogram/easytype");
@@ -177,7 +189,7 @@ EasyType.isFalsity(NaN); // true
 ```
 
 
-##### 7. WeakType
+##### 8. WeakType
 
 ```js
 const EasyType = require("@easyprogram/easytype");
@@ -193,7 +205,7 @@ EasyType.isWeakType(new WeakMap()); // true
 EasyType.isWeakType(new WeakSet()); // true
 ```
 
-##### 8. Error
+##### 9. Error
 
 ```js
 const EasyType = require("@easyprogram/easytype");
@@ -208,7 +220,7 @@ EasyType.isError(new TypeError()) // true
 EasyType.isError(new URIError()) // true
 ```
 
-##### 9. Binary
+##### 10. Binary
 
 ```js
 const EasyType = require("@easyprogram/easytype");
@@ -266,7 +278,7 @@ EasyType.isTypedArray(new BigInt64Array()); // true
 EasyType.isTypedArray(new BigUint64Array()); // true
 ```
 
-##### 10. Global
+##### 11. Global
 
 ```js
 const EasyType = require("@easyprogram/easytype");
@@ -278,7 +290,7 @@ EasyType.isGlobal(global); // true
 EasyType.isWindow(window); // true
 ```
 
-##### 11. Other
+##### 12. Other
 
 ```js
 const EasyType = require("@easyprogram/easytype");
