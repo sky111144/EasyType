@@ -52,3 +52,4 @@ const isNormalNumber = require("./cases/isNormalNumber.test.js");
 const isSpecialNumber = require("./cases/isSpecialNumber.test.js");
 const isArrayOfNumber = require("./cases/isArrayOfNumber.test.js");
 const isArrayOfString = require("./cases/isArrayOfString.test.js");
+const isArrayOfBoolean = require("./cases/isArrayOfBoolean.test.js");

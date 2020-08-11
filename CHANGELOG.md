@@ -1,3 +1,7 @@
+### v1.0.29
++ feature list:
+  1. Array of Boolean
+
 ### v1.0.28
 + feature list:
   1. Array of String

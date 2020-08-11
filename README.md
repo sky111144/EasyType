@@ -124,7 +124,7 @@ EasyType.isNormalFunction(() => {});       // false
 EasyType.isNormalFunction(function () {}); // true
 ```
 
-####$ 4. Array
+##### 4. Array
 
 ```js
 const EasyType = require("@easyprogram/easytype");
@@ -140,6 +140,12 @@ EasyType.isArrayOfString([]); // false
 EasyType.isArrayOfString([1, 2, 3]); // false
 EasyType.isArrayOfString(['0', true, false]); // false
 EasyType.isArrayOfString(['0', '1', '2']); // true
+
+// 3. Determine whether it is Array of Boolean
+EasyType.isArrayOfBoolean([]); // false
+EasyType.isArrayOfBoolean([1, 2, 3]); // false
+EasyType.isArrayOfBoolean(['0', '1', '2']); // false
+EasyType.isArrayOfBoolean([true, true, false]); // false
 ```
 
 ##### 5. Object

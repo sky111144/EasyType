@@ -1,7 +1,7 @@
 class EasyType {
     constructor () {}
 
-    version = "1.0.28"
+    version = "1.0.29"
 
     types = {
         NULL: "[object Null]",
@@ -164,6 +164,10 @@ class EasyType {
 
     isArray (target) {
         return this.typeOf(target) === this.types.ARRAY;
+    }
+
+    isArrayOfBoolean (target) {
+        return this.isArray(target) && target.length > 0 && target.every((item) => this.isBoolean(item));
     }
 
     isArrayOfNumber (target) {
