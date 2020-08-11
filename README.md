@@ -145,7 +145,14 @@ EasyType.isArrayOfString(['0', '1', '2']); // true
 EasyType.isArrayOfBoolean([]); // false
 EasyType.isArrayOfBoolean([1, 2, 3]); // false
 EasyType.isArrayOfBoolean(['0', '1', '2']); // false
+EasyType.isArrayOfBoolean([true, true, false]); // true
+
+// 4. Determine whether it is Array of Null
+EasyType.isArrayOfBoolean([]); // false
+EasyType.isArrayOfBoolean([1, 2, 3]); // false
+EasyType.isArrayOfBoolean(['0', '1', '2']); // false
 EasyType.isArrayOfBoolean([true, true, false]); // false
+EasyType.isArrayOfBoolean([null, null, null]); // true
 ```
 
 ##### 5. Object
