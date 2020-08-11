@@ -51,3 +51,4 @@ const isGlobal = require("./cases/isGlobal.test.js");
 const isNormalNumber = require("./cases/isNormalNumber.test.js");
 const isSpecialNumber = require("./cases/isSpecialNumber.test.js");
 const isArrayOfNumber = require("./cases/isArrayOfNumber.test.js");
+const isArrayOfString = require("./cases/isArrayOfString.test.js");

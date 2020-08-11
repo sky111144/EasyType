@@ -134,6 +134,12 @@ EasyType.isArrayOfNumber([]); // false
 EasyType.isArrayOfNumber(['0', '1', '2']); // false
 EasyType.isArrayOfNumber(['0', true, false]); // false
 EasyType.isArrayOfNumber([1, 2, 3]); // true
+
+// 2. Determine whether it is Array of String
+EasyType.isArrayOfString([]); // false
+EasyType.isArrayOfString([1, 2, 3]); // false
+EasyType.isArrayOfString(['0', true, false]); // false
+EasyType.isArrayOfString(['0', '1', '2']); // true
 ```
 
 ##### 5. Object

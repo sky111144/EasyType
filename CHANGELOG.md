@@ -1,3 +1,7 @@
+### v1.0.28
++ feature list:
+  1. Array of String
+
 ### v1.0.27
 + feature list:
   1. Array of Number
