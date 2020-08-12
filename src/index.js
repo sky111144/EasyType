@@ -1,7 +1,7 @@
 class EasyType {
     constructor () {}
 
-    version = "1.0.30"
+    version = "1.0.31"
 
     types = {
         NULL: "[object Null]",
@@ -180,6 +180,10 @@ class EasyType {
 
     isArrayOfNull (target) {
         return this.isArray(target) && target.length > 0 && target.every((item) => this.isNull(item));
+    }
+
+    isArrayOfUndefined (target) {
+        return this.isArray(target) && target.length > 0 && target.every((item) => this.isUndefined(item));
     }
 
     isMath (target) {

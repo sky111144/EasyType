@@ -148,11 +148,18 @@ EasyType.isArrayOfBoolean(['0', '1', '2']); // false
 EasyType.isArrayOfBoolean([true, true, false]); // true
 
 // 4. Determine whether it is Array of Null
-EasyType.isArrayOfBoolean([]); // false
-EasyType.isArrayOfBoolean([1, 2, 3]); // false
-EasyType.isArrayOfBoolean(['0', '1', '2']); // false
-EasyType.isArrayOfBoolean([true, true, false]); // false
-EasyType.isArrayOfBoolean([null, null, null]); // true
+EasyType.isArrayOfNull([]); // false
+EasyType.isArrayOfNull([1, 2, 3]); // false
+EasyType.isArrayOfNull(['0', '1', '2']); // false
+EasyType.isArrayOfNull([true, true, false]); // false
+EasyType.isArrayOfNull([null, null, null]); // true
+
+// 5. Determine whether it is Array of Undefined
+EasyType.isArrayOfUndefined([]); // false
+EasyType.isArrayOfUndefined([1, 2, 3]); // false
+EasyType.isArrayOfUndefined(['0', '1', '2']); // false
+EasyType.isArrayOfUndefined([null, null, null]); // false
+EasyType.isArrayOfUndefined([undefined, undefined, undefined]); // true
 ```
 
 ##### 5. Object

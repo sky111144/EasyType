@@ -1,6 +1,6 @@
 {
   "name": "@easyprogram/easytype",
-  "version": "1.0.30",
+  "version": "1.0.31",
   "description": "how to typeof easily",
   "main": "dist/easytype.js",
   "directories": {
