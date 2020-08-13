@@ -1,3 +1,7 @@
+### v1.0.32
++ feature list:
+  1. Array of Symbol
+
 ### v1.0.31
 + feature list:
   1. Array of Undefined

@@ -55,3 +55,4 @@ const isArrayOfString = require("./cases/isArrayOfString.test.js");
 const isArrayOfBoolean = require("./cases/isArrayOfBoolean.test.js");
 const isArrayOfNull = require("./cases/isArrayOfNull.test.js");
 const isArrayOfUndefined = require("./cases/isArrayOfUndefined.test.js");
+const isArrayOfSymbol = require("./cases/isArrayOfSymbol.test.js");

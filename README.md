@@ -160,6 +160,13 @@ EasyType.isArrayOfUndefined([1, 2, 3]); // false
 EasyType.isArrayOfUndefined(['0', '1', '2']); // false
 EasyType.isArrayOfUndefined([null, null, null]); // false
 EasyType.isArrayOfUndefined([undefined, undefined, undefined]); // true
+
+// 6. Determine whether it is Array of Symbol
+EasyType.isArrayOfSymbol([]); // false
+EasyType.isArrayOfSymbol([1, 2, 3]); // false
+EasyType.isArrayOfSymbol(['0', '1', '2']); // false
+EasyType.isArrayOfSymbol([null, null, null]); // false
+EasyType.isArrayOfSymbol([Symbol(null), Symbol(undefined), Symbol(0), Symbol('hello'), Symbol(true)]); // true
 ```
 
 ##### 5. Object
