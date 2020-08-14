@@ -167,6 +167,13 @@ EasyType.isArrayOfSymbol([1, 2, 3]); // false
 EasyType.isArrayOfSymbol(['0', '1', '2']); // false
 EasyType.isArrayOfSymbol([null, null, null]); // false
 EasyType.isArrayOfSymbol([Symbol(null), Symbol(undefined), Symbol(0), Symbol('hello'), Symbol(true)]); // true
+
+// 7. Determine whether it is Array of BigInt
+EasyType.isArrayOfBigInt([]); // false
+EasyType.isArrayOfBigInt([1, 2, 3]); // false
+EasyType.isArrayOfBigInt(['0', '1', '2']); // false
+EasyType.isArrayOfBigInt([null, null, null]); // false
+EasyType.isArrayOfBigInt([BigInt(null), BigInt(undefined), BigInt(0), BigInt('hello'), BigInt(true)]); // true
 ```
 
 ##### 5. Object

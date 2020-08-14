@@ -1,3 +1,7 @@
+### v1.0.33
++ feature list:
+  1. Array of BigInt
+
 ### v1.0.32
 + feature list:
   1. Array of Symbol

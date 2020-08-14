@@ -1,7 +1,7 @@
 class EasyType {
     constructor () {}
 
-    version = "1.0.32"
+    version = "1.0.33"
 
     types = {
         NULL: "[object Null]",
@@ -188,6 +188,10 @@ class EasyType {
 
     isArrayOfSymbol (target) {
         return this.isArray(target) && target.length > 0 && target.every((item) => this.isSymbol(item));
+    }
+
+    isArrayOfBigInt (target) {
+        return this.isArray(target) && target.length > 0 && target.every((item) => this.isBigInt(item));
     }
 
     isMath (target) {
