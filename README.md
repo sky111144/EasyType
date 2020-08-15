@@ -13,6 +13,48 @@ npm i -S @easyprogram/easytype
 
 #### Usage
 
+##### 0. Basic
+
+```js
+const EasyType = require("@easyprogram/easytype");
+
+EasyType.type(null)                              // Null
+EasyType.type(undefined)                         // Undefined
+EasyType.type(false)                             // Boolean
+EasyType.type(0)                                 // Number
+EasyType.type(BigInt(123))                       // BigInt
+EasyType.type('hello world')                     // String
+EasyType.type([])                                // Array
+EasyType.type({})                                // Object
+EasyType.type(function () {})                    // Function
+EasyType.type(new Set())                         // Set
+EasyType.type(new WeakSet())                     // WeakSet
+EasyType.type(new Map())                         // Map
+EasyType.type(new WeakMap())                     // WeakMap
+EasyType.type(Symbol(null))                      // Symbol
+EasyType.type(/hello world/gi)                   // RegExp
+EasyType.type(new Promise(() => {}))             // Promise
+EasyType.type(Math)                              // Math
+EasyType.type(JSON)                              // JSON
+EasyType.type(new Error())                       // Error
+EasyType.type(new Int8Array())                   // Int8Array
+EasyType.type(new Uint8Array())                  // Uint8Array
+EasyType.type(new Uint8ClampedArray())           // Uint8ClampedArray
+EasyType.type(new Int16Array())                  // Int16Array
+EasyType.type(new Uint16Array())                 // Uint16Array
+EasyType.type(new Int32Array())                  // Int32Array
+EasyType.type(new Uint32Array())                 // Uint32Array
+EasyType.type(new Float32Array())                // Float32Array
+EasyType.type(new Float64Array())                // Float64Array
+EasyType.type(new BigInt64Array())               // BigInt64Array
+EasyType.type(new BigUint64Array())              // BigUint64Array
+EasyType.type(new ArrayBuffer())                 // ArrayBuffer
+EasyType.type(new DataView(new ArrayBuffer()))   // DataView
+EasyType.type(new Date())                        // Date
+EasyType.type(global)                            // global
+EasyType.type(window)                            // Window
+```
+
 ##### 1. Primitive
 
 ```js

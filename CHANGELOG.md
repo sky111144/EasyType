@@ -1,3 +1,7 @@
+### v1.0.34
++ feature list:
+  1. Get type of variable
+
 ### v1.0.33
 + feature list:
   1. Array of BigInt

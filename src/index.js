@@ -1,7 +1,7 @@
 class EasyType {
     constructor () {}
 
-    version = "1.0.33"
+    version = "1.0.34"
 
     types = {
         NULL: "[object Null]",
@@ -18,9 +18,9 @@ class EasyType {
         MAP: "[object Map]",
         WEAKMAP: "[object WeakMap]",
         SYMBOL: "[object Symbol]",
-        MATH: "[object Math]",
         REGEXP: "[object RegExp]",
         PROMISE: "[object Promise]",
+        MATH: "[object Math]",
         JSON: "[object JSON]",
         ERROR: "[object Error]",
         INT8ARRAY: "[object Int8Array]",
@@ -39,6 +39,10 @@ class EasyType {
         DATE: "[object Date]",
         GLOBAL: "[object global]",
         WINDOW: "[object Window]"
+    }
+
+    type (target) {
+        return this.typeOf(target).slice(8, -1);
     }
 
     typeOf (target) {
