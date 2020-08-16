@@ -172,50 +172,62 @@ EasyType.isNormalFunction(function () {}); // true
 const EasyType = require("@easyprogram/easytype");
 
 // 1. Determine whether it is Array of Number
-EasyType.isArrayOfNumber([]); // false
-EasyType.isArrayOfNumber(['0', '1', '2']); // false
-EasyType.isArrayOfNumber(['0', true, false]); // false
-EasyType.isArrayOfNumber([1, 2, 3]); // true
+EasyType.isArrayOfNumber([]);                   // false
+EasyType.isArrayOfNumber(['0', '1', '2']);      // false
+EasyType.isArrayOfNumber(['0', true, false]);   // false
+EasyType.isArrayOfNumber([1, 2, 3]);            // true
 
 // 2. Determine whether it is Array of String
-EasyType.isArrayOfString([]); // false
-EasyType.isArrayOfString([1, 2, 3]); // false
-EasyType.isArrayOfString(['0', true, false]); // false
-EasyType.isArrayOfString(['0', '1', '2']); // true
+EasyType.isArrayOfString([]);                   // false
+EasyType.isArrayOfString([1, 2, 3]);            // false
+EasyType.isArrayOfString(['0', true, false]);   // false
+EasyType.isArrayOfString(['0', '1', '2']);      // true
 
 // 3. Determine whether it is Array of Boolean
-EasyType.isArrayOfBoolean([]); // false
-EasyType.isArrayOfBoolean([1, 2, 3]); // false
-EasyType.isArrayOfBoolean(['0', '1', '2']); // false
+EasyType.isArrayOfBoolean([]);                  // false
+EasyType.isArrayOfBoolean([1, 2, 3]);           // false
+EasyType.isArrayOfBoolean(['0', '1', '2']);     // false
 EasyType.isArrayOfBoolean([true, true, false]); // true
 
 // 4. Determine whether it is Array of Null
-EasyType.isArrayOfNull([]); // false
-EasyType.isArrayOfNull([1, 2, 3]); // false
-EasyType.isArrayOfNull(['0', '1', '2']); // false
-EasyType.isArrayOfNull([true, true, false]); // false
-EasyType.isArrayOfNull([null, null, null]); // true
+EasyType.isArrayOfNull([]);                     // false
+EasyType.isArrayOfNull([1, 2, 3]);              // false
+EasyType.isArrayOfNull(['0', '1', '2']);        // false
+EasyType.isArrayOfNull([true, true, false]);    // false
+EasyType.isArrayOfNull([null, null, null]);     // true
 
 // 5. Determine whether it is Array of Undefined
-EasyType.isArrayOfUndefined([]); // false
-EasyType.isArrayOfUndefined([1, 2, 3]); // false
-EasyType.isArrayOfUndefined(['0', '1', '2']); // false
-EasyType.isArrayOfUndefined([null, null, null]); // false
+EasyType.isArrayOfUndefined([]);                // false
+EasyType.isArrayOfUndefined([1, 2, 3]);         // false
+EasyType.isArrayOfUndefined(['0', '1', '2']);   // false
+EasyType.isArrayOfUndefined([null, null, null]);// false
 EasyType.isArrayOfUndefined([undefined, undefined, undefined]); // true
 
 // 6. Determine whether it is Array of Symbol
-EasyType.isArrayOfSymbol([]); // false
-EasyType.isArrayOfSymbol([1, 2, 3]); // false
-EasyType.isArrayOfSymbol(['0', '1', '2']); // false
-EasyType.isArrayOfSymbol([null, null, null]); // false
+EasyType.isArrayOfSymbol([]);                   // false
+EasyType.isArrayOfSymbol([1, 2, 3]);            // false
+EasyType.isArrayOfSymbol(['0', '1', '2']);      // false
+EasyType.isArrayOfSymbol([null, null, null]);   // false
 EasyType.isArrayOfSymbol([Symbol(null), Symbol(undefined), Symbol(0), Symbol('hello'), Symbol(true)]); // true
 
 // 7. Determine whether it is Array of BigInt
-EasyType.isArrayOfBigInt([]); // false
-EasyType.isArrayOfBigInt([1, 2, 3]); // false
-EasyType.isArrayOfBigInt(['0', '1', '2']); // false
-EasyType.isArrayOfBigInt([null, null, null]); // false
+EasyType.isArrayOfBigInt([]);                   // false
+EasyType.isArrayOfBigInt([1, 2, 3]);            // false
+EasyType.isArrayOfBigInt(['0', '1', '2']);      // false
+EasyType.isArrayOfBigInt([null, null, null]);   // false
 EasyType.isArrayOfBigInt([BigInt(null), BigInt(undefined), BigInt(0), BigInt('hello'), BigInt(true)]); // true
+
+// 8. Determine whether it is Array of Falsity
+EasyType.isArrayOfFalsity([]);                    // false
+EasyType.isArrayOfFalsity([1, 2, 3]);             // false
+EasyType.isArrayOfFalsity(['0', '1', '2']);       // false
+EasyType.isArrayOfFalsity([null, null, null]);    // true
+EasyType.isArrayOfFalsity([undefined, undefined, undefined]); // true
+EasyType.isArrayOfFalsity([false, false, false]); // true
+EasyType.isArrayOfFalsity([0, 0, 0]);             // true
+EasyType.isArrayOfFalsity(['', '', '']);          // true
+EasyType.isArrayOfFalsity([NaN, NaN, NaN]);       // true
+EasyType.isArrayOfFalsity([null, undefined, false, 0, NaN, '']); // true
 ```
 
 ##### 5. Object
