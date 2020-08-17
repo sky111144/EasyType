@@ -228,6 +228,18 @@ EasyType.isArrayOfFalsity([0, 0, 0]);             // true
 EasyType.isArrayOfFalsity(['', '', '']);          // true
 EasyType.isArrayOfFalsity([NaN, NaN, NaN]);       // true
 EasyType.isArrayOfFalsity([null, undefined, false, 0, NaN, '']); // true
+
+// 9. Determine whether it is Array of Primitive
+EasyType.isArrayOfPrimitive([]);                    // false
+EasyType.isArrayOfPrimitive([1, 2, 3]);             // true
+EasyType.isArrayOfPrimitive(['0', '1', '2']);       // true
+EasyType.isArrayOfPrimitive([null, null, null]);    // true
+EasyType.isArrayOfPrimitive([undefined]);           // true
+EasyType.isArrayOfPrimitive([false, false, false]); // true
+EasyType.isArrayOfPrimitive([0, 0, 0]);             // true
+EasyType.isArrayOfPrimitive(['', BigInt(0), '']);   // true
+EasyType.isArrayOfPrimitive([Symbol(0), NaN, NaN]); // true
+EasyType.isArrayOfPrimitive([0, NaN, '']);          // true
 ```
 
 ##### 5. Object

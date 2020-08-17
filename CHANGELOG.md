@@ -1,3 +1,7 @@
+### v1.0.36
++ feature list:
+  1. Array of Primitive
+
 ### v1.0.35
 + feature list:
   1. Array of Falsity
