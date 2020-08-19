@@ -240,6 +240,41 @@ EasyType.isArrayOfPrimitive([0, 0, 0]);             // true
 EasyType.isArrayOfPrimitive(['', BigInt(0), '']);   // true
 EasyType.isArrayOfPrimitive([Symbol(0), NaN, NaN]); // true
 EasyType.isArrayOfPrimitive([0, NaN, '']);          // true
+
+// 10. Determine whether it is Array of X
+EasyType.isArrayOf([null], EasyType.types.NULL);            // true
+EasyType.isArrayOf([undefined], EasyType.types.UNDEFINED);  // true
+EasyType.isArrayOf([false], EasyType.types.BOOLEAN);        // true
+EasyType.isArrayOf([0], EasyType.types.NUMBER);             // true
+EasyType.isArrayOf(['hello world'], EasyType.types.STRING); // true
+EasyType.isArrayOf([[]], EasyType.types.ARRAY);             // true
+EasyType.isArrayOf([{}], EasyType.types.OBJECT);            // true
+EasyType.isArrayOf([() => {}], EasyType.types.FUNCTION);    // true
+EasyType.isArrayOf([new Set()], EasyType.types.SET);        // true
+EasyType.isArrayOf([new WeakSet()], EasyType.types.WEAKSET);// true
+EasyType.isArrayOf([new Map()], EasyType.types.MAP);        // true
+EasyType.isArrayOf([Symbol(0)], EasyType.types.SYMBOL);     // true
+EasyType.isArrayOf([/hello/gi], EasyType.types.REGEXP);     // true
+EasyType.isArrayOf([new Promise(() => {})], EasyType.types.PROMISE);   // true
+EasyType.isArrayOf([Math], EasyType.types.MATH);            // true
+EasyType.isArrayOf([JSON], EasyType.types.JSON);            // true
+EasyType.isArrayOf([new Error()], EasyType.types.ERROR);    // true
+EasyType.isArrayOf([new Int8Array()], EasyType.types.INT8ARRAY);           // true 
+EasyType.isArrayOf([new Uint8Array()], EasyType.types.UINT8ARRAY);         // true
+EasyType.isArrayOf([new Uint8ClampedArray()], EasyType.types.UINT8CLAMPEDARRAY); // true
+EasyType.isArrayOf([new Int16Array()], EasyType.types.INT16ARRAY);         // true
+EasyType.isArrayOf([new Uint16Array()], EasyType.types.UINT16ARRAY);       // true
+EasyType.isArrayOf([new Int32Array()], EasyType.types.INT32ARRAY);         // true
+EasyType.isArrayOf([new Uint32Array()], EasyType.types.UINT32ARRAY);       // true
+EasyType.isArrayOf([new Float32Array()], EasyType.types.FLOAT32ARRAY);     // true
+EasyType.isArrayOf([new Float64Array()], EasyType.types.FLOAT64ARRAY);     // true
+EasyType.isArrayOf([new BigInt64Array()], EasyType.types.BIGINT64ARRAY);   // true
+EasyType.isArrayOf([new BigUint64Array()], EasyType.types.BIGUINT64ARRAY); // true
+EasyType.isArrayOf([new ArrayBuffer()], EasyType.types.ARRAYBUFFER);       // true
+EasyType.isArrayOf([new DataView(new ArrayBuffer())], EasyType.types.DATAVIEW); // true
+EasyType.isArrayOf([new Date()], EasyType.types.DATE);                    // true
+EasyType.isArrayOf([global], EasyType.types.GLOBAL);                      // true
+EasyType.isArrayOf([window], EasyType.types.WINDOW);                      // true
 ```
 
 ##### 5. Object

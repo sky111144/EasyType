@@ -60,3 +60,4 @@ const isArrayOfBigInt = require("./cases/isArrayOfBigInt.test.js");
 const type = require("./cases/type.test.js");
 const isArrayOfFalsity = require("./cases/isArrayOfFalsity.test.js");
 const isArrayOfPrimitive = require("./cases/isArrayOfPrimitive.test.js");
+const isArrayOf = require("./cases/isArrayOf.test.js");
