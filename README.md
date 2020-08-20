@@ -259,7 +259,7 @@ EasyType.isArrayOf([new Promise(() => {})], EasyType.types.PROMISE);   // true
 EasyType.isArrayOf([Math], EasyType.types.MATH);            // true
 EasyType.isArrayOf([JSON], EasyType.types.JSON);            // true
 EasyType.isArrayOf([new Error()], EasyType.types.ERROR);    // true
-EasyType.isArrayOf([new Int8Array()], EasyType.types.INT8ARRAY);           // true 
+EasyType.isArrayOf([new Int8Array()], EasyType.types.INT8ARRAY);           // true
 EasyType.isArrayOf([new Uint8Array()], EasyType.types.UINT8ARRAY);         // true
 EasyType.isArrayOf([new Uint8ClampedArray()], EasyType.types.UINT8CLAMPEDARRAY); // true
 EasyType.isArrayOf([new Int16Array()], EasyType.types.INT16ARRAY);         // true
@@ -288,6 +288,44 @@ EasyType.isObject({ "key": "hello world" }); // true
 
 // 2. Determine whether it is Empty Object
 EasyType.isEmptyObject({}); // true
+
+// 3. Determine whether it is Object of X
+EasyType.isObjectOf({}, { key: EasyType.types.NULL });                       // false
+EasyType.isObjectOf({ key: EasyType.types.NULL }, {});                       // false
+EasyType.isObjectOf({}, {});                                                 // true
+EasyType.isObjectOf({ key: null }, { key: EasyType.types.NULL };             // true
+EasyType.isObjectOf({ key: undefined }, { key: EasyType.types.UNDEFINED });  // true
+EasyType.isObjectOf({ key: false }, { key: EasyType.types.BOOLEAN });        // true
+EasyType.isObjectOf({ key: 0 }, { key: EasyType.types.NUMBER });             // true
+EasyType.isObjectOf({ key: 'hello world' }, { key: EasyType.types.STRING }); // true
+EasyType.isObjectOf({ key: [] }, { key: EasyType.types.ARRAY });             // true
+EasyType.isObjectOf({ key: {} }, { key: EasyType.types.OBJECT });            // true
+EasyType.isObjectOf({ key: () => {} }, { key: EasyType.types.FUNCTION });    // true
+EasyType.isObjectOf({ key: new Set() }, { key: EasyType.types.SET });        // true
+EasyType.isObjectOf({ key: new WeakSet() }, { key: EasyType.types.WEAKSET });// true
+EasyType.isObjectOf({ key: new Map() }, { key: EasyType.types.MAP });        // true
+EasyType.isObjectOf({ key: Symbol(0) }, { key: EasyType.types.SYMBOL });     // true
+EasyType.isObjectOf({ key: /hello/gi }, { key: EasyType.types.REGEXP });     // true
+EasyType.isObjectOf({ key: new Promise(() => {}) }, { key: EasyType.types.PROMISE }); // true
+EasyType.isObjectOf({ key: Math }, { key: EasyType.types.MATH });            // true
+EasyType.isObjectOf({ key: JSON }, { key: EasyType.types.JSON });            // true
+EasyType.isObjectOf({ key: new Error() }, { key: EasyType.types.ERROR });    // true
+EasyType.isObjectOf({ key: new Int8Array() }, { key: EasyType.types.INT8ARRAY });           // true
+EasyType.isObjectOf({ key: new Uint8Array() }, { key: EasyType.types.UINT8ARRAY });         // true
+EasyType.isObjectOf({ key: new Uint8ClampedArray() }, { key: EasyType.types.UINT8CLAMPEDARRAY }); // true
+EasyType.isObjectOf({ key: new Int16Array() }, { key: EasyType.types.INT16ARRAY });         // true
+EasyType.isObjectOf({ key: new Uint16Array() }, { key: EasyType.types.UINT16ARRAY });       // true
+EasyType.isObjectOf({ key: new Int32Array() }, { key: EasyType.types.INT32ARRAY });         // true
+EasyType.isObjectOf({ key: new Uint32Array() }, { key: EasyType.types.UINT32ARRAY });       // true
+EasyType.isObjectOf({ key: new Float32Array() }, { key: EasyType.types.FLOAT32ARRAY });     // true
+EasyType.isObjectOf({ key: new Float64Array() }, { key: EasyType.types.FLOAT64ARRAY });     // true
+EasyType.isObjectOf({ key: new BigInt64Array() }, { key: EasyType.types.BIGINT64ARRAY });   // true
+EasyType.isObjectOf({ key: new BigUint64Array() }, { key: EasyType.types.BIGUINT64ARRAY }); // true
+EasyType.isObjectOf({ key: new ArrayBuffer() }, { key: EasyType.types.ARRAYBUFFER });       // true
+EasyType.isObjectOf({ key: new DataView(new ArrayBuffer()) }, { key: EasyType.types.DATAVIEW }); // true
+EasyType.isObjectOf({ key: new Date() }, { key: EasyType.types.DATE });                     // true
+EasyType.isObjectOf({ key: global }, { key: EasyType.types.GLOBAL });                       // true
+EasyType.isObjectOf({ key: window }, { key: EasyType.types.WINDOW });                       // true
 ```
 
 ##### 6. Iterable

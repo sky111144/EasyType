@@ -1,7 +1,7 @@
 class EasyType {
     constructor () {}
 
-    version = "1.0.37"
+    version = "1.0.38"
 
     types = {
         NULL: "[object Null]",
@@ -124,6 +124,32 @@ class EasyType {
 
     isObject (target) {
         return this.typeOf(target) === this.types.OBJECT;
+    }
+
+    isObjectOf (target, types) {
+        if (!this.isObject(target)) {
+            return false;
+        }
+
+        if (this.isEmptyObject(target)) {
+            return this.isEmptyObject(types);
+        }
+
+        if (this.isEmptyObject(types)) {
+            return false;
+        }
+
+        let result = false;
+        for (let key in target) {
+            if (target.hasOwnProperty(key) && this.typeOf(target[key]) === types[key]) {
+                result = true;
+            } else {
+                result = false;
+                break;
+            }
+        }
+
+        return result;
     }
 
     isFunction (target) {
